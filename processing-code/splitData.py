@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Oct 19 00:09:02 2022
-
-@author: wtl22
+File containing code to split dataset into training and testing
 """
 
 import numpy as np
