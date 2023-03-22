@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Oct 27 00:48:08 2022
-
-@author: wtl22
+File Containing different classifiers tried and the code
 """
 
 #%%
