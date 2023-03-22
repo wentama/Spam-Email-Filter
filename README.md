@@ -1,5 +1,8 @@
 # Spam-Email-Filter
+
 A model that classifies emails as spam/non-spam. This case study is an introductory to supervised machine learning and served as an opportunity to play around with different classifiers and understand how they work to choose the best one for the given dataset. 
+
+## Evaluation 
 
 Round 1 Evaluation: 'spamTrain1.csv' is the training data. 'spamTrain2.csv' is the testing data. This is evaulated using 'evaluateClassifier.py'
 
