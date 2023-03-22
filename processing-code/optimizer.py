@@ -1,21 +1,25 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Oct 25 21:34:46 2022
-
-@author: wtl22
+File containing hyperparameter tunning code and RandomForest classifier testing
 """
 
 #%%
 import pandas as pd
+import numpy as np
 from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import RandomizedSearchCV
 from sklearn.svm import SVC
 from sklearn.pipeline import make_pipeline
-import numpy as np
 from sklearn.feature_selection import SequentialFeatureSelector
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn import decomposition, datasets
+from sklearn import tree
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+
 #%%
 data = np.loadtxt('train_new.csv',delimiter=',')
 
@@ -39,16 +43,6 @@ sbs = SequentialFeatureSelector(estimator = model, n_features_to_select = 'auto'
 sbs.fit(X, y)
 
 #%%
-import pandas as pd
-import numpy as np
-from sklearn import decomposition, datasets
-from sklearn import tree
-from sklearn.pipeline import Pipeline
-from sklearn.model_selection import GridSearchCV
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import RandomizedSearchCV
-from sklearn.ensemble import RandomForestClassifier
-
 train = pd.read_csv('train.csv', header = None)
 trainLabels = train[30].values
 trainFeatures = train.drop(30, axis=1).values
